@@ -1,0 +1,136 @@
+<?xml version = "1.0" encoding="UTF-8" standalone="yes" ?>
+<root>
+    <sensors>
+        <chambre>
+            <temperature unit="°C">
+                36.20
+            </temperature>
+            <humidity unit="%">
+                16.00
+            </humidity>
+            <openclosedoor>
+                1
+            </openclosedoor>
+            <rainDetect>
+                0
+            </rainDetect>
+            <extBrightness>
+                jaune
+            </extBrightness>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
+        </chambre>
+        <salon>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <opencloseWindow>
+                1
+            </opencloseWindow>
+            <rainDetect>
+                0
+            </rainDetect>
+            <extBrightness>
+                0
+            </extBrightness>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
+        </salon>
+        <sdb>
+            <temperature unit="°C">
+                9.5
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <floodDetection>
+                0
+            </floodDetection>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
+        </sdb>
+        <hall>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <mail>
+                1
+            </mail>
+            <peopleInHall>
+                75
+            </peopleInHall>
+            <openclosedoor>
+                1
+            </openclosedoor>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
+        </hall>
+        <garage>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <openclosedoor>
+                1
+            </openclosedoor>
+            <carDistance>
+                0
+            </carDistance>
+            <tank>
+                75
+            </tank>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
+        </garage>
+        <cuisine>
+            <temperature unit="°C">
+                19.26
+            </temperature>
+            <humidity unit="%">
+                40.00
+            </humidity>
+            <opencloseWindow>
+                1
+            </opencloseWindow>
+            <presenceDetection>
+                0
+            <!--boolean-->
+            </presenceDetection>
+            <tempSeuil>
+                2
+            </tempSeuil>
+            <humdSeuil>
+                2
+            </humdSeuil>
+        </cuisine>
+    </sensors>
+    <!-- XML Validé le 29/04/2019 22:20 -->
+</root>
