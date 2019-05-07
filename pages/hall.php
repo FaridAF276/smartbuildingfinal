@@ -18,15 +18,7 @@
 <body>
     <?php include ('../layout/navbar.php')?>
     <div class="container-fluid">
-        <div class="row">
-            <div class ="col">
-                <canvas id="tempChart"></canvas>
-            </div>
-            <div class="col">
-                <canvas id="humidityChart"></canvas>
-            </div>
-        </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col"><button class="btn btn-info" id="door">Chargement...</button></div>
             <div class="col">
                 <div><h1>Nombre de personne dans le hall</h1></div>
@@ -39,7 +31,48 @@
             <div class="col">
                 <div id="tresholdHum"></div>
             </div>
+        </div> -->
+        <div class="card mb-3">
+            <div class="card-header">
+                Visualisation des scénarii
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <div class="card mb-3">
+                            <div class="card-header">Porte du hall</div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>Etat de la porte du Hall</td>
+                                        <td><div class="col"><button class="btn btn-info" id="door">Chargement...</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nombre de personne dans le hall</td>
+                                        <td><div id="amountPeople">Chargement...</div></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col">
+                        <div class="card mb-3">
+                            <div class="card-header">Courrier</div>
+                            <div class="card-body">
+                                <table class="table">
+                                    <tr>
+                                        <td>Etat de la porte du Hall</td>
+                                        <td><div class="col"><button class="btn btn-info" id="mail">Chargement...</button></div></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
     <script src = '../script/hall.js'></script>
 </body>
