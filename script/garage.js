@@ -81,14 +81,6 @@ try{
         setTimeout(updateData,updateInterval);
         
     }
-    function initializeTemp(tresholdTemp, tresholdHum){
-        let tresholdTempDiv = document.getElementById('tresholdTemp');
-        let tresholdHumDiv = document.getElementById('tresholdHum');
-        tresholdHumDiv.textContent = tresholdTemp.toString();
-        tresholdTempDiv.textContent = tresholdHum.toString();
-    }
-    var tresh =readXML();
-    initializeTemp(tresh.tresholdTemp, tresh.tresholdHum);
     updateData();
 }
 catch (error) {

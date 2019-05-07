@@ -39,6 +39,10 @@
                             </div>
                             <div class="card-body">
                                 <div class="row">
+                                    <div class="col ">Remplissage de la citerne</div>
+                                    <div class="col ">Etat de la porte du garage</div>
+                                </div>
+                                <div class="row">
                                     <div class="progress col">
                                         <div id="tankProgress"class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
@@ -57,8 +61,11 @@
                             Présence de la voiture
                             </div>
                             <div class="card-body">
-                                <div class="col">
-                                    <button id="carPresence">Chargement...</button>
+                                <div class="row">
+                                    <div class="col">
+                                        <button id="carPresence">Chargement...</button>
+                                    </div>
+                                    <div class="col"> <div class="card mb-3">Vous pouvez surveiller en temps réel si un membre de votre famille est arrivé à la maison</div></div>
                                 </div>
                             </div>
                         </div>
