@@ -68,8 +68,12 @@
                             <div id="tresholdTemp" class="alert alert-dismissible alert-primary"></div>
                         </div>
                         <div class="col">
-                            <div id="tresholdHum" class="alert alert-dismissible alert-primary">
-                            </div>
+                            <div id="tresholdHum" class="alert alert-dismissible alert-primary"></div>
+                        </div>
+                        <div class="alert alert-dismissible alert-primary col">
+                            Etat de la fenêtre : 
+                            <button id="windowBtn" class="btn btn-info"> Chargement...</button>
+                        </div>
                     </div>
                 </div>
             </div>

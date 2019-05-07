@@ -80,6 +80,19 @@ try{
         })
     });
 
+    function updateWindow(data){
+        windowState = data.windBool;
+        let windowBtn = document.getElementById('windowBtn');
+        if(windowState){
+            windowBtn.className = "btn btn-success";
+            windowBtn.textContent = "Fenêtre ouverte";
+        }else if(windowState == 0){
+            windowBtn.className = "btn btn-warning";
+            windowBtn.textContent = "Fenêtre fermée";
+        }else{
+            console.log("Erreur dans l'acquisition des données...");   
+        }
+    }
     function updatePresence(data){
         let presenceBtn = document.getElementById('presence');
         if (data.presence){
@@ -114,7 +127,8 @@ try{
         addData(fichier);
         updatePresence(fichier);
         setTimeout(updateData,updateInterval);
-    }
+        updateWindow(fichier);
+        }
     function initializeTemp(data){
         let tresholdTempDiv = document.getElementById('tresholdTemp');
         let tresholdHumDiv = document.getElementById('tresholdHum');
