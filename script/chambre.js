@@ -108,9 +108,9 @@ try{
         }else if(data.brightness.toLowerCase() == "jaune"){
             brightnessBtn.className="btn btn-warning btn-lg";
             brightnessBtn.textContent = "Jaune";
-        }else if (data.brightness.toLowerCase() == "blanc"){
-            brightnessBtn.className="btn btn-light btn-lg";
-            brightnessBtn.textContent = "Blanc";
+        }else if (data.brightness.toLowerCase() == "bleu"){
+            brightnessBtn.className="btn btn-info btn-lg";
+            brightnessBtn.textContent = "Bleu";
         }else{
             console.log("Données inattendue, veuillez vérifier le fichier XML : "+data.brightness.toLowerCase()
             + "\n type : " + typeof data.brightness.toLowerCase());
