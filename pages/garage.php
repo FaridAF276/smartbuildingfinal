@@ -18,31 +18,69 @@
 <body>
     <?php include ('../layout/navbar.php')?>
     <div class="container-fluid">
-        <div class="row">
-            <div class ="col">
-                <canvas id="tempChart"></canvas>
-            </div>
-            <div class="col">
-                <canvas id="humidityChart"></canvas>
-            </div>
-        </div>
-        <div class="row">
+        <!-- <div class="row">
+            <div class="col"><img src="../images/porte-garage2.jpg" alt="Imag de garage" height="768" width="1024"></div>
             <div class="progress col">
                 <div id="tankProgress"class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
             <div class="col">
                 <button id="door">Chargement...</button>
             </div>
+            
+        </div> -->
+        <div class="row">
+            <div class="col"><img src="../images/porte-garage2.jpg" alt="Imag de garage" height="768" width="1024"></div>
             <div class="col">
-                <div id="tresholdTemp"></div>
-            </div>
-            <div class="col">
-                <div id="tresholdHum"></div>
-            </div>
-            <div class="col">
-                <button id="carPresence">Chargement...</button>
+                <div class="row">
+                    <div class="col">
+                        <div class="card mb-3 col">
+                            <div class="card-header">
+                                Citerne et porte
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="progress col">
+                                        <div id="tankProgress"class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="col">
+                                        <button id="door">Chargement...</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card mb-3">
+                            <div class="card-header">
+                            Présence de la voiture
+                            </div>
+                            <div class="card-body">
+                                <div class="col">
+                                    <button id="carPresence">Chargement...</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- <div class="card mb-3 col">
+            <div class="card-header">
+                Citerne et porte
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="progress col">
+                        <div id="tankProgress"class="progress-bar" role="progressbar" style="width: 10%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="col">
+                        <button id="door">Chargement...</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
     <script src = '../script/garage.js'></script>
 </body>
