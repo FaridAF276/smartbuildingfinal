@@ -25,7 +25,12 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("hall/personnes")
     client.subscribe("hall/jardin")
 
-    client.subscribe("room/device")
+    client.subscribe("cuisine/people")
+    client.subscribe("cuisine/temperature")
+    client.subscribe("cuisine/refTemp")
+    client.subscribe("cuisine/window")
+
+    # client.subscribe("room/device")
 
 def on_message(client, userdata, msg):
     print("Message recu "+msg.topic+" "+str(msg.payload))
@@ -231,6 +236,42 @@ def on_message(client, userdata, msg):
                 for gardendoor in sec.iter('openclosedoor'):
                     new_gardendoor = str(msg.payload)
                     gardendoor.text = new_gardendoor
+
+    if msg.topic == "cuisine/people":
+        print("Quelqu'un est dans la cuisine ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('cuisine'):
+                for person in sec.iter('presenceDetection'):
+                    new_person = str(msg.payload)
+                    person.text = new_person
+
+    if msg.topic == "cuisine/temperature":
+        print("Temperature dans la cuisine ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('cuisine'):
+                for temperature in sec.iter('temperature'):
+                    new_temp = str(msg.payload)
+                    temperature.text = new_temp
+
+    if msg.topic == "cuisine/refTemp":
+        print("Temperature de reference ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('cuisine'):
+                for reference in sec.iter('tempSeuil'):
+                    new_ref = str(msg.payload)
+                    reference.text = new_ref
+
+    if msg.topic == "cuisine/window":
+        print("Fenetre de la cuisine ouverte ")
+
+        for child in root.iter('sensors'):
+            for sec in child.iter('cuisine'):
+                for wind in sec.iter('opencloseWindow'):
+                    new_wind = str(msg.payload)
+                    wind.text = new_wind
 
     tree.write(xml_file)
     print("Nouveau fichier xml")
