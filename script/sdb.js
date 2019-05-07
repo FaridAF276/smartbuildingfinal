@@ -100,6 +100,7 @@ try{
                     
                     tempChart.data.datasets[0].data.shift();
                     //%
+                    humidChart.data.labels.shift();
                     humidChart.data.datasets[0].data.shift();
                 }
                 else updateCount++;

@@ -138,7 +138,6 @@ try{
         let humSeuilDeclenchement = data.graphHumidity + data.tresholdHum;
         tresholdHumDiv.textContent = "Le déclenchement de la fenêtre s'effectuera à "+ humSeuilDeclenchement.toString()+" %";
         tresholdTempDiv.textContent = "Le déclenchement de la fenêtre s'effectuera à "+ tempSeuilDeclenchement.toString()+" °C";
-
     }
     initializeTemp(readXML());
     updateData();
