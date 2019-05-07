@@ -18,22 +18,60 @@
 <body>
     <?php include ('../layout/navbar.php')?>
     <!-- Graph température -->
+    <br>
     <div class="container-fluid">
+        <div class="card text-white bg-info mb-3 container-fluid">
+            <div class="card-header"><h1>Les graphiques</h1></div>
+            <div class="card-body"> Les graphiques ci-dessus proviennent des capteurs d'humidité et de température. La transmission des données de fait de la manière suivante : Les capteurs mesurent le température et l'humidité et les envoient au module "ESP32", ces données sont ensuite envoyé au boitier RaspBerry Pi qui les consignes dans un fichier (.xml) le site internet va donc lire ces données directement sur le fichier .xml</div>
+        </div>
+
+        <div class ="card mb-3">
+                <div class="card-header">
+                    Graphiques temps réel
+                </div>
+                <div class="card-body">
+                    <div class="row"> <div class="col"><canvas id="tempChart"></canvas></div>
+                </div>
+        </div>    
+
         <div class="row">
-            <div class ="col">
-                <canvas id="tempChart"></canvas>
+            <div class="col"><ol class="breadcrumb">
+                <li class="breadcrumb-item"><h1>Les témoins</h1></li>
+            </ol></div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-dismissible alert-warning">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    Dans la cuisine on a un capteur qui permet de mesurer l'humidité. La cuisine possède des fenêtres automatiques qui s'ouvre dès qu'il fait trop chaud dans la pièces
+                </div>
             </div>
             <div class="col">
-                <!-- <canvas id="humidityChart"></canvas> -->
+                <div class="alert alert-dismissible alert-warning">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <div class="">
+                        D'autre part, nous prenons à chaque démarrage un température de référence, à partir de cette température de réference nous déclenchons les fenêtres pour aérer en cas d'humidité trop importante
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col"><button class="btn btn-info" id="presence">Chargement...</button></div>
-            <div class="col">
-                <div id="tresholdTemp"></div>
-            </div>
-            <div class="col">
-                <div id="tresholdHum"></div>
+        <!-- Différents boutons -->
+        <div class="card md-3">
+            <div class="card-header"> Visualisation des scénarii</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="alert alert-dismissible alert-primary col">
+                        Etat du capteur de présence : 
+                        <button class="btn btn-info" id="presence">Chargement...</button></div>
+                        <div class="col">
+                            <div id="tresholdTemp" class="alert alert-dismissible alert-primary"></div>
+                        </div>
+                        <div class="col">
+                            <div id="tresholdHum" class="alert alert-dismissible alert-primary">
+                            </div>
+                    </div>
+                </div>
             </div>
         </div>
 

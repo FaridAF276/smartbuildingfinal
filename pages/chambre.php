@@ -18,16 +18,11 @@
 <body>
     <?php include ('../layout/navbar.php');
     ?>
+    <br>
     <div class="container-fluid">
-        <div class="jumbotron">
-        <div class="row">
-        <h1>Les graphiques</h1>
-        </div>
-        <div class="row">
-            <div class="col">
-                Les graphiques ci-dessus proviennent des capteurs d'humidité et de température. La transmission des données de fait de la manière suivante : Les capteurs mesurent le température et l'humidité et les envoient au module "ESP32", ces données sont ensuite envoyé au boitier RaspBerry Pi qui les consignes dans un fichier (.xml) le site internet va donc lire ces données directement sur le fichier .xml
-            </div>
-        </div>
+        <div class="card text-white bg-info mb-3 container-fluid">
+            <div class="card-header"><h1>Les graphiques</h1></div>
+            <div class="card-body"> Les graphiques ci-dessus proviennent des capteurs d'humidité et de température. La transmission des données de fait de la manière suivante : Les capteurs mesurent le température et l'humidité et les envoient au module "ESP32", ces données sont ensuite envoyé au boitier RaspBerry Pi qui les consignes dans un fichier (.xml) le site internet va donc lire ces données directement sur le fichier .xml</div>
         </div>
         <div class ="card mb-3">
                 <div class="card-header">
@@ -47,13 +42,13 @@
         </div>
         <div class="row">
             <div class="col">
-                <div class="alert alert-dismissible alert-secondary">
+                <div class="alert alert-dismissible alert-warning">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     Dans la chambre on a un capteur qui permet de mesurer la luminosité. La chambre a un éclairage adaptatif. La lumière prendra différente couleur en fonction de la couleur du jour.
                 </div>
             </div>
             <div class="col">
-                <div class="alert alert-dismissible alert-secondary">
+                <div class="alert alert-dismissible alert-warning">
                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                     <div class="">
                         D'autre part, nous prenons à chaque démarrage un température de référence, à partir de cette température de réference nous déclenchons les fenêtres pour aérer en cas d'humidité trop importante
