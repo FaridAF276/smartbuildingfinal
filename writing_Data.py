@@ -38,7 +38,7 @@ def on_message(client, userdata, msg):
     tree = et.parse(xml_file)
     root = tree.getroot()
     if msg.topic == "chambre/humidity":
-        print("Humidité de la chambre")
+        print("Humidite de la chambre")
 
         for child in root.iter('sensors'):
             for sec in child.iter('chambre'):
@@ -57,7 +57,7 @@ def on_message(client, userdata, msg):
     #             print("Dans le nouveau fichier xml "+ element.tag + " : "+ " : "+ element.text)
 
     if msg.topic == "chambre/temperature":
-        print("Température de la chambre")
+        print("Temperature de la chambre")
 
         for child in root.iter('sensors'):
             for sec in child.iter('chambre'):
@@ -66,7 +66,7 @@ def on_message(client, userdata, msg):
                     temperature.text = new_tmp
 
     if msg.topic == "chambre/light_color":
-        print("Couleur des LED allumées de la chambre")
+        print("Couleur des LED allumees de la chambre")
 
         for child in root.iter('sensors'):
             for sec in child.iter('chambre'):
