@@ -70,7 +70,7 @@ def on_message(client, userdata, msg):
 
         for child in root.iter('sensors'):
             for sec in child.iter('chambre'):
-                for bright in sec.iter('resistance'):
+                for bright in sec.iter('extBrightness'):
                     new_LED = str(msg.payload)
                     if new_LED == "1":
                         new_color = "jaune"
