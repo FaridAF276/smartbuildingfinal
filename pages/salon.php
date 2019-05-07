@@ -20,28 +20,52 @@
     <!-- Graphiques de l'humidité et température -->
     <div class="container-fluid">
         <div class="row">
-            <div class ="col">
-                <canvas id="tempChart"></canvas>
+            <div class="col">
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Scénarii pluie
+                    </div>
+                    <div class="card-body">
+                        <div class="card text-white bg-info mb-3 container-fluid">
+                            <div class="card-header"><h1>Ouverture des fenêtres</h1></div>
+                            <div class="card-body"> A l'aide du capteur d'humidité à l'extérieur de la pièce nous sommes en mesure de détecter des chutes de pluies lorsque la pluie est détecter les fenêtres se ferment automatiquement pour éviter que de l'eau n'entre dans la chambre</div>
+                        </div>
+                        <!-- Suite -->
+                        <table class="table">
+                            <tr>
+                                <td>Etat de la fenêtre</td>
+                                <td><button class="btn btn-info" id="window">Chargement...</button></td>
+                            </tr>
+                            <tr>
+                                <td>Détection de la pluie</td>
+                                <td><button class="btn btn-info" id="rain">Chargement...</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
             <div class="col">
-                <canvas id="humidityChart"></canvas>
+            <div class="card mb-3">
+                    <div class="card-header">
+                        Scénarii éclairage
+                    </div>
+                    <div class="card-body">
+                        <div class="card text-white bg-info mb-3 container-fluid">
+                            <div class="card-header"><h1>La luminosité</h1></div>
+                            <div class="card-body">
+                            Le capteur de luminosité à une sensibilité réglable et nous permet de mesurer de degrès de luminosité et déclenche l'allumage ou l'extinction de l'éclairage afin d'économiser de l'énergie. 
+                            </div>
+                        </div>
+                        <!-- Suite -->
+                        <table class="table">
+                            <tr>
+                                <td>Etat de l'éclairage</td>
+                                <td><div class="col"><button class="btn btn-info" id="brightness">Chargement...</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col"><button class="btn btn-info" id="brightness">Chargement...</button></div>
-            <div class="col">
-                <button class="btn btn-info" id="window">Chargement...</button>
-            </div>
-            <div class="col">
-                <button class="btn btn-info" id="rain">Chargement...</button>
-            </div>
-            <div class="col">
-                <div id="tresholdTemp"></div>
-            </div>
-            <div class="col">
-                <div id="tresholdHum"></div>
-            </div>
-
         </div>
     </div>
     <script src = '../script/salon.js'></script>
