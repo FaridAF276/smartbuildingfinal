@@ -34,7 +34,6 @@ try{
     const maxPointInChart = 20;
     var updateCount = 0;
     const numberElements = 15;
-    let charTemp = document.getElementById('tempChart').getContext('2d');
     let charHumidity = document.getElementById('humidityChart').getContext('2d');
     var commonOptions = {
         scales: {
@@ -48,7 +47,10 @@ try{
             }],
             yAxes: [{
                 ticks: {
-                    beginAtZero:true
+                    stepSize : 0.25,
+                    gridLines : {
+                        display : true 
+                    }
                 }
             }]
         },
@@ -63,7 +65,7 @@ try{
         data : {
             datasets : [{
                 label : 'Test',
-                data : [1],
+                data : [],
                 pointBackgroundColor : 'green'
             }]
         },
@@ -71,23 +73,6 @@ try{
             title:{
                 display: true,
                 text: "Humidité",
-                fontSize: 18
-            }
-        })
-    });
-    let tempChart = new Chart(charTemp, {
-        type : 'line',
-        data : {
-            datasets : [{
-                label : 'Test',
-                data : [1],
-                pointBackgroundColor : 'green'
-            }]
-        },
-        options: Object.assign({}, commonOptions, {
-            title:{
-                display: true,
-                text: "Température",
                 fontSize: 18
             }
         })
@@ -107,21 +92,17 @@ try{
 
         function addData(data) {
             if(data){
-                tempChart.data.labels.push(new Date());
                 humidChart.data.labels.push(new Date());
                 //   console.log(typeof testChart.data.datasets[0].data)
-                tempChart.data.datasets[0].data.push(data.graphTemperature);
                 humidChart.data.datasets[0].data.push(data.graphHumidity);
                 if(updateCount > numberElements){
                     //t
-                    tempChart.data.labels.shift();
+                    
                     tempChart.data.datasets[0].data.shift();
                     //%
-                    humidChart.data.labels.shift();
                     humidChart.data.datasets[0].data.shift();
                 }
                 else updateCount++;
-                tempChart.update();
                 humidChart.update();
             }
         }
