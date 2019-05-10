@@ -286,4 +286,5 @@ client.connect("192.168.4.1", 1883, 60)
 # reconnecting. Check the documentation at
 # https://github.com/eclipse/paho.mqtt.python
 # for information on how to use other loop*() functions
+time.sleep(1)
 client.loop_forever()
