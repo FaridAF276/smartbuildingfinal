@@ -1,6 +1,7 @@
 import paho.mqtt.client as mqtt
 import os
 import xml.etree.cElementTree as et
+import time
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
