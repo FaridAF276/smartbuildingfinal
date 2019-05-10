@@ -96,9 +96,6 @@ try{
                 //   console.log(typeof testChart.data.datasets[0].data)
                 humidChart.data.datasets[0].data.push(data.graphHumidity);
                 if(updateCount > numberElements){
-                    //t
-                    
-                    tempChart.data.datasets[0].data.shift();
                     //%
                     humidChart.data.labels.shift();
                     humidChart.data.datasets[0].data.shift();
