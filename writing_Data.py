@@ -280,6 +280,8 @@ def on_message(client, userdata, msg):
     tree.write(xml_file)
     print("Nouveau fichier xml")
 
+
+time.sleep(2000)
 client = mqtt.Client()
 print("Hello")
 client.on_connect = on_connect
