@@ -282,15 +282,16 @@ def on_message(client, userdata, msg):
 
 
 time.sleep(2000)
-client = mqtt.Client()
-print("Hello")
-client.on_connect = on_connect
-client.on_message = on_message
+while 1:
+    client = mqtt.Client()
+    print("Hello")
+    client.on_connect = on_connect
+    client.on_message = on_message
 
-client.connect("192.168.4.1", 1883, 60)
-# Process network traffic and dispatch callbacks. This will also handle
-# reconnecting. Check the documentation at
-# https://github.com/eclipse/paho.mqtt.python
-# for information on how to use other loop*() functions
-time.sleep(2)
-client.loop_forever()
+    client.connect("192.168.4.1", 1883, 60)
+    # Process network traffic and dispatch callbacks. This will also handle
+    # reconnecting. Check the documentation at
+    # https://github.com/eclipse/paho.mqtt.python
+    # for information on how to use other loop*() functions
+    time.sleep(2)
+    client.loop_forever()
