@@ -281,7 +281,7 @@ def on_message(client, userdata, msg):
     print("Nouveau fichier xml")
 
 
-time.sleep(2000)
+time.sleep(120)
 while 1:
     client = mqtt.Client()
     print("Hello")
