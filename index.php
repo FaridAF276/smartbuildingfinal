@@ -54,26 +54,16 @@
           </ul>
         </div>
 </nav>
-    ?>
     <div class="container-fluid">
-      <div class="row">
-        <div class ="col"><canvas id="tempChart"></canvas></div>
-        <div class="col">
-          <canvas id="humidityChart"></canvas>
+      <h1 align="center">Smart Ohm'e</h1>
+      <div class="card mb-3">
+        <div class="card-header">
+          Photo de l'équipe
         </div>
-      </div>    
-    </div>
-
-    <div class="container-fluid">
-          <div class="row">
-            <div>
-              <h1>Etat de la porte : </h1>
-              <button type="button" class="btn btn-success" id="temoinPorte">Ouverte</button>
-            </div>
-            <div class="col">
-            
-            </div>
-          </div>
+        <div class="card-body">
+          <img src="images/smartbuilding.jpg" class="img-fluid"alt="Responsive Image">
+        </div>
+      </div>
     </div>
     <script src="script/graphics.js"></script>
 </body>
