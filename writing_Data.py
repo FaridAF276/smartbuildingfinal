@@ -1,3 +1,5 @@
+#! /usr/bin/python3
+
 import paho.mqtt.client as mqtt
 import os
 import xml.etree.cElementTree as et
@@ -31,7 +33,8 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("cuisine/refTemp")
     client.subscribe("cuisine/window")
 
-    # client.subscribe("room/device")
+    # client.subscribe("room/device") Exemple
+
 
 def on_message(client, userdata, msg):
     print("Message recu "+msg.topic+" "+str(msg.payload))
@@ -287,5 +290,5 @@ client.connect("192.168.4.1", 1883, 60)
 # reconnecting. Check the documentation at
 # https://github.com/eclipse/paho.mqtt.python
 # for information on how to use other loop*() functions
-time.sleep(1)
+time.sleep(2)
 client.loop_forever()
