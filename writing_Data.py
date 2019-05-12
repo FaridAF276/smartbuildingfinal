@@ -1,6 +1,9 @@
+#! /usr/bin/python3
+
 import paho.mqtt.client as mqtt
 import os
 import xml.etree.cElementTree as et
+import time
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code "+str(rc))
@@ -30,7 +33,8 @@ def on_connect(client, userdata, flags, rc):
     client.subscribe("cuisine/refTemp")
     client.subscribe("cuisine/window")
 
-    # client.subscribe("room/device")
+    # client.subscribe("room/device") Exemple
+
 
 def on_message(client, userdata, msg):
     print("Message recu "+msg.topic+" "+str(msg.payload))
@@ -276,14 +280,18 @@ def on_message(client, userdata, msg):
     tree.write(xml_file)
     print("Nouveau fichier xml")
 
-client = mqtt.Client()
-print("Hello")
-client.on_connect = on_connect
-client.on_message = on_message
 
-client.connect("192.168.4.1", 1883, 60)
-# Process network traffic and dispatch callbacks. This will also handle
-# reconnecting. Check the documentation at
-# https://github.com/eclipse/paho.mqtt.python
-# for information on how to use other loop*() functions
-client.loop_forever()
+time.sleep(120)
+while 1:
+    client = mqtt.Client()
+    print("Hello")
+    client.on_connect = on_connect
+    client.on_message = on_message
+
+    client.connect("192.168.4.1", 1883, 60)
+    # Process network traffic and dispatch callbacks. This will also handle
+    # reconnecting. Check the documentation at
+    # https://github.com/eclipse/paho.mqtt.python
+    # for information on how to use other loop*() functions
+    time.sleep(2)
+    client.loop_forever()
